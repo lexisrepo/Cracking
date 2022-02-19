@@ -113,7 +113,7 @@ You can beginning by a crack of the LM password, in the case of the some hash al
 "b1b1d2ebf0bb5707135a9032caea49d3" -> we have the same password
 ```
 
-2. Verify lo```gin=password
+2. Verify login=password
 
 ➤ For LM hash :
 Generate the list of the login
