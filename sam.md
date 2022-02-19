@@ -130,16 +130,19 @@ Generate the list of the login
 ```
 cat [LIST_OF_HASH].txt | cut -d':' -f1 > [OUTPUT_LOGIN].txt
 ```
+
 Try login=password 
 ```
 hashcat -m 1000 hash.txt [LOGIN].txt
 ```
 
 3. Dictionnary attack
+
 ➤ For LM hash :
 ```
 hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt --force
 ```
+
 ➤ For NTLM hash:
 ```
 hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt --force
