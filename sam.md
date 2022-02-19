@@ -132,7 +132,7 @@ cat [LIST_OF_HASH].txt | cut -d':' -f1 > [OUTPUT_LOGIN].txt
 
 • Try login=password 
 hashcat -m  1000 hash.txt [LOGIN].txt
-``
+```
 
 3. Dictionnary attack
 ```
