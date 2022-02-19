@@ -137,26 +137,39 @@ hashcat -m 1000 hash.txt [LOGIN].txt
 
 3. Dictionnary attack
 ➤ For LM hash :
-		hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt --force
-
+```
+hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt --force
+```
 ➤ For NTLM hash:
-		hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt --force
+```
+hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt --force
+```
 
 4. Dictionnary attack with rules
 
 To see the existing rules attacks
-		ls -l /usr/share/hashcat/rules/
+```
+ls -l /usr/share/hashcat/rules/
+```
 
 ➤ For LM hash :
-		hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt  -r [Rules_path] --force
+```
+hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt  -r [Rules_path] --force
+```
 
 ➤ For NTLM hash:
-		hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt -r [Rules_path] --force
-
+```
+hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt -r [Rules_path] --force
+```
 
 5. Show cracked/not cracked passwords
+
 ➤ For LM hash :
-		hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt -show
-			
+```
+hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt -show
+```
+
 ➤ For NTLM hash:
-		hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt -show
+```
+hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt -show
+```
