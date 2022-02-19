@@ -114,37 +114,33 @@ You can beginning by a crack of the LM password, in the case of the some hash al
 ```
 
 2. Verify login=password
-
+```
 ➤ For LM hash :
 Generate the list of the login
-```
+
 cat [LIST_OF_HASH].txt | cut -d':' -f1 > [OUTPUT_LOGIN].txt
-```
+
 Try login=password 
-```
+
 hashcat -m 3000 hash.txt [LOGIN].txt
 ```
 
+```
 ➤ For NTLM hash :
 Generate the list of the login
-```
 cat [LIST_OF_HASH].txt | cut -d':' -f1 > [OUTPUT_LOGIN].txt
-```
 
 Try login=password 
-```
+
 hashcat -m 1000 hash.txt [LOGIN].txt
 ```
 
 3. Dictionnary attack
-
+```
 ➤ For LM hash :
-```
 hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt --force
-```
 
 ➤ For NTLM hash:
-```
 hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt --force
 ```
 
@@ -155,24 +151,20 @@ To see the existing rules attacks
 ls -l /usr/share/hashcat/rules/
 ```
 
+```
 ➤ For LM hash :
-```
 hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt  -r [Rules_path] --force
-```
 
 ➤ For NTLM hash:
-```
 hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt -r [Rules_path] --force
 ```
 
 5. Show cracked/not cracked passwords
 
+```
 ➤ For LM hash :
-```
 hashcat -m 3000 -a 0 [Dictionnary].txt [Hash].txt -show
-```
 
 ➤ For NTLM hash:
-```
 hashcat -m 1000 -a 0 [Dictionnary].txt [Hash].txt -show
 ```
