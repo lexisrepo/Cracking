@@ -84,8 +84,8 @@ Be careful, the rules=all parameter is very long. With a lot of hashes, this ope
 
 #### "T" Cracking methodology :
 ```
-		Work in progress
-		More information : https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/changes-in-oracle-database-12c-password-hashes/
+Work in progress
+More information : https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/changes-in-oracle-database-12c-password-hashes/
 ```
 
 #### Show result:
