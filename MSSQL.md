@@ -154,7 +154,7 @@ hashcat -m 1731 -a 0 [Dictionnary].txt [Hash].txt  -r [Rules_path] --force
 ➤ For "MSSQL05" hash :
 hashcat -m 132 -a 0 [Dictionnary].txt [Hash].txt --show
 
-➤	For "MSSQL" hash :
+➤ For "MSSQL" hash :
 hashcat -m 131 -a 0 [Dictionnary].txt [Hash].txt --show
 
 ➤ For "MSSQL12" hash :
