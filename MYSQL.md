@@ -49,7 +49,6 @@ john [type of attack] --format=[hash of the format]
 #### "MD5" Cracking methodology :
 ```
 ➤ 1. Example of john format:
-
 8b70bf2ffce34ced3223dfc9e4fa9cc7
 username:8b70bf2ffce34ced3223dfc9e4fa9cc7
 username:8b70bf2ffce34ced3223dfc9e4fa9cc7:::::::
@@ -62,12 +61,11 @@ john --wordlist=dictionary.txt --format=raw-md5 hashes.txt --fork=4
 john --wordlist=dictionary.txt --format=raw-md5 hashes.txt --fork=4 --rules=KoreLogic
 
 Be careful, the rules=all parameter is very long. With a lot of hashes, this operation will working during several days.
-
+```
 
 #### "SHA1" Cracking methodology : 
 ```
 ➤ 1. Example of john format:
-
 d10c988ca61b785f5a7756b5852683d798fe4d92
 username:d10c988ca61b785f5a7756b5852683d798fe4d92
 username:d10c988ca61b785f5a7756b5852683d798fe4d92:::::::
@@ -84,8 +82,7 @@ Be careful, the rules=all parameter is very long. With a lot of hashes, this ope
 
 #### "Double SHA1" Cracking methodology : 
 ```
-➤ 1. Example of john format:
-	
+➤ 1. Example of john format:	
 *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19
 username:*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19
 username:*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19:::::::
