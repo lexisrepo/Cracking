@@ -133,7 +133,7 @@ hashcat -m 131 -a 0 [Dictionnary].txt [Hash].txt  -r [Rules_path] --force
 ```
 
 #### "MSSQL12" Cracking methodology :
-
+```
 ➤ 1. Hash format
 0x0200F8AD6746B48DC390E37F07597844806A9488D286E65E901CB1AA33AE425B8335E7C5858840105DA0AF14BD26AA3662EAF33E40ADABD0FECFCC740B5338497584697AA69F
 	
@@ -147,6 +147,7 @@ hashcat -m 1731 -a 0 [Dictionnary].txt [Hash].txt --force
 To see the existing rules attacks: ls -l /usr/share/hashcat/rules/
 
 hashcat -m 1731 -a 0 [Dictionnary].txt [Hash].txt  -r [Rules_path] --force
+```
 
 #### Show result:
 ```
